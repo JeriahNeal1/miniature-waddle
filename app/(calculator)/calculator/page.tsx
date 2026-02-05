@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import { evaluate } from '@/lib/math/mathEngine'
-import { saveSession, loadSession } from '@/lib/math/sessionStorage'
+import { saveSession, loadSession, SESSION_KEY } from '@/lib/math/sessionStorage'
 import CalculatorDisplay from '@/components/calculator/CalculatorDisplay'
 import CalculatorButtons from '@/components/calculator/CalculatorButtons'
 
@@ -59,7 +59,7 @@ export default function CalculatorPage() {
 
   const handleClearHistory = () => {
     setHistory([])
-    localStorage.removeItem('physim-session')
+    localStorage.removeItem(SESSION_KEY)
   }
 
   return (

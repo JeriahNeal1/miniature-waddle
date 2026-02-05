@@ -3,7 +3,7 @@
  * Uses localStorage for client-side storage
  */
 
-const SESSION_KEY = 'physim-session'
+export const SESSION_KEY = 'physim-session'
 
 export interface Session {
   history: Array<{
